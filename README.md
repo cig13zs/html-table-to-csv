@@ -1,22 +1,60 @@
-# Html-table-to-csv
+# HTML Table to CSV Converter — Extract Table Data Online
 
-Extract HTML table rows and convert them to clean RFC 4180 CSV offline.
+> Extract and convert HTML <table> markup into clean RFC 4180 CSV format online. Handles spans, nested tags, and messy whitespace offline.
 
+[![Live Web App](https://img.shields.io/badge/Web_App-Live_Demo-3B82F6?style=flat-square)](https://cig13zs.github.io/html-table-to-csv/)
+[![Chrome Extension](https://img.shields.io/badge/Chrome_Extension-Manifest_V3-10B981?style=flat-square)](https://github.com/cig13zs/html-table-to-csv/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Zero Telemetry](https://img.shields.io/badge/Telemetry-Zero_Tracking-success?style=flat-square)](https://github.com/cig13zs)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-buy_me_a_coffee-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/jju1s)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
-Web app: **[cig13zs.github.io/html-table-to-csv](https://cig13zs.github.io/html-table-to-csv/)**
+---
 
-## What it does
+## ⚡ Key Features
 
-Runs 100% offline in your browser. Zero tracking, zero network requests.
+- **100% Client-Side & Offline:** Pure vanilla JavaScript runtime. Zero network uploads, zero telemetry, zero analytics tracking.
+- **Instant Processing:** Zero dependencies or heavy frameworks for ultra-fast, lightweight execution.
+- **Dual Delivery:** Use directly in your browser at [https://cig13zs.github.io/html-table-to-csv/](https://cig13zs.github.io/html-table-to-csv/) or install the offline Chrome Extension package.
+- **Automated Test Suite:** Backed by unit tests (`node core.test.js`) ensuring reliable and accurate execution.
 
-## Install
+---
 
-1. Download latest zip from [Releases](https://github.com/cig13zs/html-table-to-csv/releases).
-2. Open chrome://extensions and turn on **Developer mode**.
-3. Click **Load unpacked** and select extension.
+## 📖 How It Works
 
-## License
+Paste raw HTML containing <table> elements. The parser traverses rows and cells to produce clean, delimited CSV data.
 
-MIT licensed. Tip jar: [ko-fi.com/jju1s](https://ko-fi.com/jju1s).
+---
+
+## 🛠️ Offline Chrome Extension Installation
+
+1. Download or clone this repository:
+   ```bash
+   git clone https://github.com/cig13zs/html-table-to-csv.git
+   ```
+2. Open Google Chrome and navigate to `chrome://extensions/`.
+3. Enable **Developer mode** in the top right toggle.
+4. Click **Load unpacked** and select the `extension/` folder inside this repository.
+5. The extension will be available in your browser toolbar, working 100% offline.
+
+---
+
+## 💡 Frequently Asked Questions (FAQ)
+
+### Is my data uploaded to any server?
+No. Everything executes locally inside your browser memory or extension sandbox. No telemetry, third-party scripts, or API requests are made.
+
+### Can I use the core library in Node.js or JavaScript projects?
+Yes! The core engine in `core.js` is exported as a standard Universal Module Definition (UMD), compatible with Node.js `require()`, ES modules, and browser `<script>` tags:
+
+```javascript
+const engine = require('./core');
+// Use the core functions directly in your project
+```
+
+---
+
+## 📄 License & Author
+
+- **Author:** [jju1s](https://github.com/cig13zs)
+- **License:** [MIT License](LICENSE)
+- **Support:** If this tool saves you time, support development at [ko-fi.com/jju1s](https://ko-fi.com/jju1s).
