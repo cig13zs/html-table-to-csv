@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Html-table-to-csv \u2014 Extract HTML table rows and convert them",
+  "name": "Html Table To Csv",
   "version": "1.0.0",
   "description": "Extract HTML table rows and convert them to clean RFC 4180 CSV offline.",
   "icons": {
@@ -11,6 +11,6 @@
   "permissions": [],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Html-table-to-csv"
+    "default_title": "Html Table To Csv"
   }
 }
