@@ -14,7 +14,7 @@
       const row = [];
       let cellMatch;
       while ((cellMatch = cellRegex.exec(rowContent)) !== null) {
-        let cellText = cellMatch[1].replace(/<[^>]+>/g, ''); // strip tags
+        let cellText = cellMatch[1].replace(/<[^>]+>/g, '');
         cellText = cellText.replace(/&nbsp;/g, ' ')
                            .replace(/&amp;/g, '&')
                            .replace(/&lt;/g, '<')
