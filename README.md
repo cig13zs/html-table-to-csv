@@ -23,6 +23,8 @@
 
 Paste raw HTML containing <table> elements. The parser traverses rows and cells to produce clean, delimited CSV data.
 
+Cells and headers starting with `=`, `+`, `-`, `@`, tab, or carriage return are prefixed with `'` for spreadsheet safety.
+
 ---
 
 ## Install the extension

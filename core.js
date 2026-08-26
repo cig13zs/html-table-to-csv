@@ -35,10 +35,11 @@
     if (!rows.length) return '';
     return rows.map(function (row) {
       return row.map(function (cell) {
-        if (cell.includes(delimiter) || cell.includes('"') || cell.includes('\n')) {
-          return '"' + cell.replace(/"/g, '""') + '"';
+        const safeCell = /^[=+\-@\t\r]/.test(cell) ? "'" + cell : cell;
+        if (safeCell.includes(delimiter) || safeCell.includes('"') || safeCell.includes('\n') || safeCell.includes('\r')) {
+          return '"' + safeCell.replace(/"/g, '""') + '"';
         }
-        return cell;
+        return safeCell;
       }).join(delimiter);
     }).join('\n');
   }
